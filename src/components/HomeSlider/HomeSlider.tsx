@@ -11,23 +11,28 @@ const HomeSlider = () => {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
-        // Update width and height when component mounts on the client side
         setWidth(window.innerWidth);
         setHeight(window.innerHeight);
 
-        // Event listener to update width and height on window resize
         const handleResize = () => {
             setWidth(window.innerWidth);
             setHeight(window.innerHeight);
         };
 
-        // Add event listener for window resize
         window.addEventListener('resize', handleResize);
 
-        // Cleanup event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };
+    }, []);
+
+    useEffect(() => {
+        // Check if the performance object is available before using it
+        if (typeof performance !== 'undefined') {
+            // Your code that uses the performance object
+            const timing = performance.now();
+            console.log(`Performance timing: ${timing}ms`);
+        }
     }, []); // Empty dependency array ensures the effect runs only once on mount
 
     const banners = [
