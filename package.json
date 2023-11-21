@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.0.1",
-    "react": "^18",
+    "next": "^16.0.3",
+    "react": "^18.2.0",
+    "@emotion/react":"11.11.1",
     "react-dom": "^18",
     "react-horizontal-datepicker": "^2.0.3",
     "react-icons": "^4.11.0",

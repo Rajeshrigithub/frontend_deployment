@@ -15,7 +15,7 @@ const ProfilePage = () => {
         'Content-Type': 'application/json',
       },
       credentials: 'include'
-    })
+    })      
       .then((res) => res.json())
       .then((data) => {
         if (data.ok) {
